@@ -1,0 +1,19 @@
+{
+    "parameters": {
+        "google_api": {
+            "client_secret_file": "client_secret_910443753452-46uls2n5rauh4g24erkpgulehhsaf6g1.apps.googleusercontent.com.json",
+            "api_name": "drive",
+            "api_version": "v3",
+            "scopes": "https://www.googleapis.com/auth/drive",
+            "folder_id": {
+                "model_version_launch": "1dLk88i0tVpu6zh8TyHOyjv66strN8q0w"
+            }
+        }
+    },
+    "task": {
+        "update": {
+            "update_timestamp": "2022-12-22T 01:05:52.671952Z",
+            "repeat_interval": "15 s"
+        }
+    }
+}
