@@ -20,7 +20,7 @@ convert2sec = {
 while True:
     # Config --------------------------------------------------------------------
     config = json.load(open('volume/check_update_config.json'))
-    model_update_config = json.load(open('volume/model_config.json'))
+    model_update_config = json.load(open('volume/config.json'))
 
     current_date = datetime.datetime.now()
 
@@ -28,7 +28,7 @@ while True:
     update_timestamp = datetime.datetime.strptime(update_timestamp, '%Y-%m-%dT %H:%M:%S.%fZ').timetuple()
     update_timestamp = datetime.datetime.fromtimestamp(mktime(update_timestamp))
 
-    con = sqlite3.connect(f"volume/log.db")
+    con = sqlite3.connect(f"volume/20221216.db")
     cur = con.cursor()
     cur.execute('SELECT * FROM model_version_control WHERE   id = (SELECT MAX(id)  FROM model_version_control)')
     sqlite_output = cur.fetchone()
